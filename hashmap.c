@@ -39,7 +39,19 @@ int is_equal(void *key1, void *key2) {
   return 0;
 }
 
-void insertMap(HashMap *map, char *key, void *value) {}
+void insertMap(HashMap *map, char *key, void *value) {
+  if (key == NULL || map == NULL) {
+    return;
+  }
+
+  int i = hash(key, map->capacity);
+
+  Pair *newPair = createPair(key, value);
+
+  if (newPair == NULL) {
+    return;
+  }
+}
 
 void enlarge(HashMap *map) {
   enlarge_called = 1; // no borrar (testing purposes)
