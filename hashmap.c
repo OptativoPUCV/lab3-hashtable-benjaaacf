@@ -57,7 +57,7 @@ HashMap *createMap(long capacity) {
   map->size = 0;
   map->current = -1;
 
-  map->buckets = (modf **)malloc(sizeof(Node));
+  map->buckets = (Pair **)malloc(sizeof(Pair *) * capacity);
 }
 
 void eraseMap(HashMap *map, char *key) {}
