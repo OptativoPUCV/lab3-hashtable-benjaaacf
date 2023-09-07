@@ -44,7 +44,7 @@ void insertMap(HashMap *map, char *key, void *value) {
     return;
   }
 
-  long i = hash(key, map->capacity);
+  long index = hash(key, map->capacity);
 
   Pair *newPair = createPair(key, value);
 
