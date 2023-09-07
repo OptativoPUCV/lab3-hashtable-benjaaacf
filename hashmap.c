@@ -59,11 +59,7 @@ HashMap *createMap(long capacity) {
 
   map->buckets = (Pair **)calloc(capacity, sizeof(Pair *));
 
-  if (map->buckets == NULL) {
-    free(map);
-
-    return NULL;
-  }
+  return map;
 }
 
 void eraseMap(HashMap *map, char *key) {}
