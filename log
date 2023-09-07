@@ -46,3 +46,17 @@ hashmap.c:61:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 1b68988
+Thu 07 Sep 2023 07:43:08 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:60:26: error: expected expression before ‘)’ token
+   60 |   map->buckets = (modf **)malloc(sizeof(Node));
+      |                          ^
+hashmap.c:61:1: error: control reaches end of non-void function [-Werror=return-type]
+   61 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+126a9a0
