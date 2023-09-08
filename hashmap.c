@@ -91,7 +91,13 @@ Pair *searchMap(HashMap *map, char *key) {
 
       return map->buckets[index];
     }
+
+    index = (index + 1) % map->capacity;
   }
+
+  map->current = -1;
+
+  return NULL;
 }
 
 Pair *firstMap(HashMap *map) { return NULL; }
