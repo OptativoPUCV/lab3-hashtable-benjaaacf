@@ -108,6 +108,17 @@ Pair *searchMap(HashMap *map, char *key) {
   return NULL;
 }
 
-Pair *firstMap(HashMap *map) { return NULL; }
+Pair *firstMap(HashMap *map) {
+  int index = 0;
+
+  while (map->buckets[index] == NULL || map->buckets[index]->key == NULL) {
+
+    index = (index + 1) % map->capacity;
+  }
+
+  map->current = index;
+
+  return map->buckets[index];
+}
 
 Pair *nextMap(HashMap *map) { return NULL; }
