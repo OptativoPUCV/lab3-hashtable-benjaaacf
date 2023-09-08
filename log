@@ -238,3 +238,13 @@ hashmap.c:86:13: error: invalid operands to binary == (have ‘Pair’ and ‘vo
       |       Pair
 Compilation failed
 91a1609
+Fri 08 Sep 2023 02:19:24 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:86:7: error: expected expression before ‘Pair’
+   86 |   if (Pair == NULL) {
+      |       ^~~~
+Compilation failed
+257e337
