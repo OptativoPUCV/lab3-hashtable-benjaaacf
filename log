@@ -248,3 +248,9 @@ hashmap.c:86:7: error: expected expression before ‘Pair’
       |       ^~~~
 Compilation failed
 257e337
+Fri 08 Sep 2023 02:27:58 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  8|3
+total_score: 40/70
+7224a32
