@@ -155,3 +155,17 @@ Fri 08 Sep 2023 01:50:45 AM UTC:
  tests:  5|4
 total_score: 30/70
 aeefaf7
+Fri 08 Sep 2023 01:52:16 AM UTC: 
+ hashmap.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:89:9: error: expected expression before ‘)’ token
+   89 |     if ()
+      |         ^
+hashmap.c:91:1: error: control reaches end of non-void function [-Werror=return-type]
+   91 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+9b812ae

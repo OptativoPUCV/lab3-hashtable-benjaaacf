@@ -82,7 +82,13 @@ HashMap *createMap(long capacity) {
 
 void eraseMap(HashMap *map, char *key) {}
 
-Pair *searchMap(HashMap *map, char *key) { return NULL; }
+Pair *searchMap(HashMap *map, char *key) {
+  int index = hash(key, map->capacity);
+
+  while (map->buckets[index] != NULL) {
+    if ()
+  }
+}
 
 Pair *firstMap(HashMap *map) { return NULL; }
 
