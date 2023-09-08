@@ -80,7 +80,15 @@ HashMap *createMap(long capacity) {
   return map;
 }
 
-void eraseMap(HashMap *map, char *key) {}
+void eraseMap(HashMap *map, char *key) {
+  Pair *pair = searchMap(map, key);
+
+  if (*pair == NULL) {
+    pair->key = NULL;
+
+    map->size++;
+  }
+}
 
 Pair *searchMap(HashMap *map, char *key) {
   int index = hash(key, map->capacity);

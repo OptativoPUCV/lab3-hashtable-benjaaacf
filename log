@@ -226,3 +226,15 @@ Fri 08 Sep 2023 02:09:43 AM UTC:
  tests:  8|3
 total_score: 40/70
 c39e904
+Fri 08 Sep 2023 02:19:09 AM UTC: 
+ hashmap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:86:13: error: invalid operands to binary == (have ‘Pair’ and ‘void *’)
+   86 |   if (*pair == NULL) {
+      |       ~~~~~ ^~
+      |       |
+      |       Pair
+Compilation failed
+91a1609
