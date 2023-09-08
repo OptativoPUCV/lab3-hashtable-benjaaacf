@@ -111,9 +111,9 @@ Pair *searchMap(HashMap *map, char *key) {
 Pair *firstMap(HashMap *map) {
   int index = 0;
 
-  while (map->buckets[index] == NULL || map->buckets[index]->key == NULL) {
+  while (index < map->capacity || map->buckets[index] == NULL) {
 
-    index = (index + 1) % map->capacity;
+    index++;
   }
 
   map->current = index;
