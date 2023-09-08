@@ -86,7 +86,11 @@ Pair *searchMap(HashMap *map, char *key) {
   int index = hash(key, map->capacity);
 
   while (map->buckets[index] != NULL) {
-    if ()
+    if (is_equal(map->buckets, key)) {
+      map->current = index;
+
+      retrun map;
+    }
   }
 }
 

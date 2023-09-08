@@ -169,3 +169,20 @@ hashmap.c:91:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 9b812ae
+Fri 08 Sep 2023 01:56:08 AM UTC: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:92:7: error: unknown type name ‘retrun’
+   92 |       retrun map;
+      |       ^~~~~~
+hashmap.c:92:14: error: unused variable ‘map’ [-Werror=unused-variable]
+   92 |       retrun map;
+      |              ^~~
+hashmap.c:95:1: error: control reaches end of non-void function [-Werror=return-type]
+   95 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c7443df
