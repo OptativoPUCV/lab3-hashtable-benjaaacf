@@ -116,9 +116,13 @@ Pair *firstMap(HashMap *map) {
     index++;
   }
 
-  map->current = index;
+  if (index < map->capacity) {
+    map->current = index;
 
-  return map->buckets[index];
+    return map->buckets[index];
+  }
+
+  return NULL;
 }
 
 Pair *nextMap(HashMap *map) { return NULL; }
