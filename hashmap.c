@@ -89,7 +89,7 @@ Pair *searchMap(HashMap *map, char *key) {
     if (is_equal(map->buckets, key)) {
       map->current = index;
 
-      retrun map;
+      return map->buckets[index];
     }
   }
 }
