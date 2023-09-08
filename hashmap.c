@@ -122,6 +122,7 @@ Pair *firstMap(HashMap *map) {
     return map->buckets[index];
   }
 
+  map->current = -1;
   return NULL;
 }
 
