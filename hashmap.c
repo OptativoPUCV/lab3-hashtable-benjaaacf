@@ -71,9 +71,16 @@ void enlarge(HashMap *map) {
     }
   }
 
-  map->buckets = (Pair **)calloc(map->capacity, sizeof(Pair *));
+  map->buckets = (Pair **)calloc(map->capacity * 2, sizeof(Pair *));
   map->capacity = map->capacity * 2;
   map->size = 0;
+
+  for (int i = 0; i < count; i++) {
+    insertMap(map, auxBuckets[i]->key, auxBuckets[i]->value);
+    map->size++;
+  }
+
+  free(auxBuckets);
 }
 
 HashMap *createMap(long capacity) {
