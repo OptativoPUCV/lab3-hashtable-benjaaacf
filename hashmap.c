@@ -130,7 +130,7 @@ Pair *nextMap(HashMap *map) {
 
   int index = map->current + 1;
 
-  while (index < map->capacity || map->buckets[index] == NULL) {
+  while (index < map->capacity && map->buckets[index] == NULL) {
     index++;
   }
 
