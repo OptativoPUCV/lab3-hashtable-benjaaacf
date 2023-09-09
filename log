@@ -337,3 +337,17 @@ Sat 09 Sep 2023 12:49:20 AM UTC:
  tests:  16|1
 total_score: 60/70
 1724efe
+Sat 09 Sep 2023 12:50:22 AM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:74:19: error: ‘pait’ undeclared (first use in this function)
+   74 |   map->buckets = (pait *)calloc(map->capacity, sizeof(Pair *));
+      |                   ^~~~
+hashmap.c:74:19: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:74:25: error: expected expression before ‘)’ token
+   74 |   map->buckets = (pait *)calloc(map->capacity, sizeof(Pair *));
+      |                         ^
+Compilation failed
+3db01b6
