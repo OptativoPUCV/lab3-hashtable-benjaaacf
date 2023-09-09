@@ -72,6 +72,8 @@ void enlarge(HashMap *map) {
   }
 
   map->buckets = (Pair **)calloc(map->capacity, sizeof(Pair *));
+  map->capacity = map->capacity * 2;
+  map->size = 0;
 }
 
 HashMap *createMap(long capacity) {
