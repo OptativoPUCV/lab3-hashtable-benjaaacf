@@ -126,4 +126,21 @@ Pair *firstMap(HashMap *map) {
   return NULL;
 }
 
-Pair *nextMap(HashMap *map) { return NULL; }
+Pair *nextMap(HashMap *map) {
+
+  int index = map->current + 1;
+
+  while (index < map->capacity || map->buckets[index] == NULL) {
+    index++;
+  }
+
+  if (index < map->capacity) {
+    map->current = index;
+
+    return map->buckets[index];
+  }
+
+  map->current = -1;
+
+  return NULL;
+}
